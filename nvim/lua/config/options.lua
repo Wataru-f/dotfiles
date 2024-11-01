@@ -19,8 +19,15 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
----- comment color
-vim.api.nvim_set_hl(0, "Comment", { ctermfg = "Grey", fg = "#a9a9a9" })
+---- color
+vim.api.nvim_set_hl(0, "Comment", { ctermfg = "Grey", fg = "#a9a9a9" })  -- comment
+vim.cmd([[highlight Statement ctermfg=208]])  -- orange
+vim.cmd([[highlight Delimiter ctermfg=254]])  -- white
+vim.cmd([[highlight Special ctermfg=254]])  -- white
+vim.cmd([[highlight SpecialChar ctermfg=254]])  -- white
+vim.cmd([[highlight Type ctermfg=254]])  -- white
+vim.cmd([[highlight Operator ctermfg=87]])  -- blue
+vim.cmd([[highlight MatchParen cterm=NONE ctermfg=87 ctermbg=237 guibg=NONE]])  -- blue
 
 ---- copy and paste
 vim.api.nvim_set_option("clipboard","unnamed")
